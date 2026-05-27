@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tables-to-cif"
+version = "0.1.0"
+description = "Convert crystallographic SI tables (Markdown) into pymatgen-readable CIF."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10"
+keywords = ["crystallography", "cif", "pymatgen", "agent-skill"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = ["pymatgen>=2024.3.1"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+tables-to-cif = "tables_to_cif.cli:main"
+
+[project.urls]
+Homepage   = "https://github.com/<your-name>/tables-to-cif"
+Repository = "https://github.com/<your-name>/tables-to-cif"
+Issues     = "https://github.com/<your-name>/tables-to-cif/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"tables_to_cif" = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
