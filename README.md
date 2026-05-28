@@ -27,7 +27,7 @@ Both defaults can be overridden from the CLI.
 ## Install
 
 ```bash
-git clone https://github.com/<your-name>/tables-to-cif.git
+git clone https://github.com/Saii1te/crystallography-table_to_pymatgen-available-CIF
 cd tables-to-cif
 pip install -e .[test]
 ```
